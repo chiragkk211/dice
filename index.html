@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1 {color:indianred; font-family: cursive; font-size: 600%;
+            } 
+            body {
+                background-color:black;
+            }
+            img{
+                margin: 29px;
+            }
+
+                   </style>
+    </head>
+    <body>
+        <center>
+
+  
+        <h1 id="result">
+           DRAW!
+        </h1>
+        <img src="images/dice1.png" id="player1">
+        <img src="images/dice1.png" id="player2">
+    </center>
+    
+    <script>
+        var randomnumber1=Math.floor(Math.random()*6+1)
+        var randomnumber2=Math.floor(Math.random()*6+1)
+    
+        var randomimage1="images/dice"+randomnumber1+".png"
+        var randomimage2="images/dice"+randomnumber2+".png"
+        document.getElementById("player1").src=randomimage1
+        document.getElementById("player2").src=randomimage2
+        if(randomnumber1>randomnumber2){
+            document.getElementById("result").innerHTML="Player 1 WINS!"
+    
+        }
+        else if(randomnumber1==randomnumber2){
+            document.getElementById("result").innerHTML="Draw"
+        }
+        else{
+            document.getElementById("result").innerHTML="Player 2 WINS!"
+        }
+        
+
+
+                </script>
+        </body>
+        
+</html>
