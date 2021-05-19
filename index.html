@@ -10,6 +10,21 @@
             img{
                 margin: 29px;
             }
+            #but {
+		box-sizing: border-box;
+		width: 95px;
+		height: 40px;
+		border: 1px solid dodgerblue;
+		margin: auto;
+		border-radius: 4px;
+		font-family: Verdana,
+			Geneva, Tahoma, sans-serif;
+
+		background-color: dodgerblue;
+		color: white;
+		font-size: 20px;
+		cursor: pointer;
+	}
 
                    </style>
     </head>
@@ -22,6 +37,9 @@
         </h1>
         <img src="images/dice1.png" id="player1">
         <img src="images/dice1.png" id="player2">
+            <button id="but" onclick="myfunc_2()">
+			RESET
+		</button>
     </center>
     
     <script>
@@ -42,6 +60,10 @@
         else{
             document.getElementById("result").innerHTML="Player 2 WINS!"
         }
+        
+        function myfunc_2(){
+     location.reload()
+    }
         
 
 
